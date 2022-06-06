@@ -1,0 +1,25 @@
+local Player = game.Players.LocalPlayer
+local Mouse = Player:GetMouse()
+local Event = game:GetService("ReplicatedStorage").MainEvent
+local Audios = {
+    Humming = 7481193560,
+    Jumpscare = 7588947168,
+    LoudSound = 4929575301,
+    Song = 9045389581
+}
+
+function PlayId(id)
+            Event:FireServer("Boombox", id)
+end
+
+Mouse.KeyDown:Connect(function(key)
+    elseif key == "c" then 
+       PlayId(Audios.LoudSound)
+       
+    elseif key == "x" then 
+       PlayId(Audios.Humming)
+       
+ elseif key == "v" then 
+       PlayId(Audios.Song)
+    end
+end)
