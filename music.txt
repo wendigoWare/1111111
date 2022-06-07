@@ -13,7 +13,7 @@ function PlayId(id)
 end
 
 Mouse.KeyDown:Connect(function(key)
-    elseif key == "c" then 
+    if key == "c" then 
        PlayId(Audios.LoudSound)
        
     elseif key == "x" then 
