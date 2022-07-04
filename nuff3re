@@ -28,7 +28,7 @@ end
 
 local FluxLib = loadstring(game:HttpGet("https://pastebin.com/raw/8Eyg2N2M"))()
 
-local win = FluxLib:Window("Dark Hood", "wendigo#4444 was here", Color3.fromRGB(30,144,255), Enum.KeyCode.B)
+local win = FluxLib:Window("Tha Hood", "wendigo#4444 was here", Color3.fromRGB(30,144,255), Enum.KeyCode.B)
 
 local Main = win:Tab("FE Infinite Money", "http://www.roblox.com/asset/?id=6023426915")
 
@@ -51,6 +51,14 @@ Main:Button("Get Money Once Once", "Fires the ProximityPrompt once", function()
                        fireproximityprompt(v.ProximityPrompt)
            end
        end
+end)
+
+Section:NewButton("God", "its just god.", function()
+    for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do 
+    if v.Name == "Death" then 
+        v:Destroy() 
+    end 
+end
 end)
 
 local Main = win:Tab("Stuff", "http://www.roblox.com/asset/?id=6023426915")
