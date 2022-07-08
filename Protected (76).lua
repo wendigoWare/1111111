@@ -1,3 +1,10 @@
+game:GetService("StarterGui"):SetCore("SendNotification",{
+    Title = "wendigo#4444",
+    Text = "had to switch ww for a moment, partnership upcoming",
+    Button1 = "😹🚬",
+    Duration = 0.9
+    })
+
 _, Protected_by_MoonSecV2, Discord = 'discord.gg/gQEH2uZxUk'
 
 
