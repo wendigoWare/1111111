@@ -1,1 +1,1 @@
-loadstring(game:HttpGet('https://scripts.luawl.com/13979/wendigoware.lua'))()
+loadstring(game:HttpGet('https://scripts.luawl.com/hosted/3738/13979/wendigoware.lua'))()
