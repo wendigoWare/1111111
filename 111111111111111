@@ -85,7 +85,7 @@ seen before so yes its good
     Settings = {
         Kalslock = {
         Enabled = true,
-        Key = "T",
+        Key = "Q",
         showdot = true,
         airshots = true,
         notifaction = true,
